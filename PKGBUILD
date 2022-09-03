@@ -1,20 +1,22 @@
 # Maintainer: Matt C <mdc028[at]bucknell[dot]edu>
 
-pkgname=crystal-wallpapers
+_name=wallpapers
+
+pkgname="crystal-$name"
 pkgver=1.0.3
 pkgrel=2
 pkgdesc="Crystal Linux Wallpaper Images"
 arch=('any')
-url="https://git.tar.black/crystal/wallpapers"
+url="https://github.com/crystal-linux/$_name"
 license=('GPL')
-source=()
+source=("git+$url")
 depends=()
 conflicts=()
 md5sums=()
 
 package() {
+    cd "${srcdir}/${_name}"
 
     mkdir -p "${pkgdir}/usr/share/backgrounds/crystal"
     cp -rv ../*.png ../*.svg "${pkgdir}/usr/share/backgrounds/crystal/."
-    
 }
