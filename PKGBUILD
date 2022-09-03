@@ -2,7 +2,7 @@
 
 _name=wallpapers
 
-pkgname="crystal-$name"
+pkgname="crystal-$_name"
 pkgver=1.0.3
 pkgrel=2
 pkgdesc="Crystal Linux Wallpaper Images"
@@ -12,11 +12,11 @@ license=('GPL')
 source=("git+$url")
 depends=()
 conflicts=()
-md5sums=()
+sha256sums=('SKIP')
 
 package() {
     cd "${srcdir}/${_name}"
 
     mkdir -p "${pkgdir}/usr/share/backgrounds/crystal"
-    cp -rv ../*.png ../*.svg "${pkgdir}/usr/share/backgrounds/crystal/."
+    cp -rv *.png *.svg "${pkgdir}/usr/share/backgrounds/crystal/."
 }
