@@ -6,14 +6,12 @@ _name=wallpapers
 pkgname="crystal-$_name"
 pkgver=1.0.3
 pkgrel=2
-pkgdesc="Crystal Linux Wallpapers"
+pkgdesc='Crystal Linux Wallpapers'
 arch=('any')
 url="https://github.com/crystal-linux/$_name"
 license=('GPL')
 source=("git+$url")
 makedepends=('git')
-depends=()
-conflicts=()
 sha256sums=('SKIP')
 
 package() {
