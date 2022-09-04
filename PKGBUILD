@@ -1,22 +1,23 @@
-# Maintainer: Matt C <mdc028[at]bucknell[dot]edu>
+# Maintainer:  echo -n 'TWljaGFsIFMuIDxtaWNoYWxAZ2V0Y3J5c3QuYWw+' | base64 -d
+# Contributor: echo -n 'amFzaW8gPGphc2lvQGdldGNyeXN0LmFsPg=='     | base64 -d
 
 _name=wallpapers
 
 pkgname="crystal-$_name"
 pkgver=1.0.3
 pkgrel=2
-pkgdesc="Crystal Linux Wallpaper Images"
+pkgdesc="Crystal Linux Wallpapers"
 arch=('any')
 url="https://github.com/crystal-linux/$_name"
 license=('GPL')
 source=("git+$url")
+makedepends=('git')
 depends=()
 conflicts=()
 sha256sums=('SKIP')
 
 package() {
-    cd "${srcdir}/${_name}"
+    cd "$srcdir/$_name"
 
-    mkdir -p "${pkgdir}/usr/share/backgrounds/crystal"
-    cp -rv *.png *.svg "${pkgdir}/usr/share/backgrounds/crystal/."
+    install -Dm 0755 *.png *.svg "$pkgdir/usr/share/backgrounds/crystal/."
 }
