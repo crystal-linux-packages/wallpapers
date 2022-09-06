@@ -17,5 +17,8 @@ sha256sums=('SKIP')
 package() {
     cd "$srcdir/$_name"
 
-    install -Dm 0755 *.png *.svg "$pkgdir/usr/share/backgrounds/crystal/."
+    find . \
+        -type f \
+     \( -name "*.png" -o -name "*.svg" \) \
+        -exec install -Dm 0755 -t "$pkgdir/usr/share/backgrounds/crystal/." {} +
 }
