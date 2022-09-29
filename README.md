@@ -1,1 +1,1 @@
-PKGBUILD for crystal-linux/wallpapers
+# PKGBUILD for crystal-linux/wallpapers
