@@ -18,4 +18,5 @@ package() {
     install -d "${pkgdir}/usr/share/backgrounds/crystal/"
     install -Dm 644 *.png "${pkgdir}/usr/share/backgrounds/crystal/"
     install -Dm 644 *.svg "${pkgdir}/usr/share/backgrounds/crystal/"
+    install -Dm 644 crystal-backgrounds.yml "${pkgdir}/usr/share/gnome-background-properties/crystal-backgrounds.xml"
 }
